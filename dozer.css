@@ -249,10 +249,11 @@ input[type="checkbox"] {
 input,
 textarea,
 select {
+  width: auto;
   /* max-width: 800px; */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 712px) {
   .inputGrid {
     flex-wrap: wrap;
   }
@@ -269,6 +270,13 @@ select {
 .sectionContainer {
   padding-left: 48px;
   padding-right: 48px;
+}
+
+@media (max-width: 600px) {
+  .sectionContainer {
+    padding-left: 24px;
+    padding-right: 28px;
+  }
 }
 
 .innerSectionContainer {
