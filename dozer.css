@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: blackOps;
+  src: url("/assets/blackOpsRegular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+:any-link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  font-size: 10px;
+  /* overflow-x: hidden; */
+}
+
+body {
+  font-size: 1.8rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: none;
+}
+
+:root {
+  --green0: #1fffd7;
+  --green1: #0eedc5;
+  --green2: #06d7b1;
+  --green3: #39e0c2;
+  --black0: #032021;
+  --black1: #021819;
+  --black2: #535b5b;
+  --black3: #758788;
+  --white0: #ffffff;
+  --white1: #f1f1f1;
+  --white2: #dadada;
+
+  --green4: #268b79;
+  --green5: #1fffd73d;
+
+  --fonts0: "Inter", sans-serif;
+}
+
+:root {
+  color: var(--black1);
+}
+
+/* typohraphy */
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  font-family: var(--fonts0);
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+h4 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-family: var(--fonts0);
+}
+
+p {
+  font-family: var(--fonts0);
+  line-height: 1.5;
+}
+
+.small {
+  font-style: italic;
+  font-size: 1.4rem;
+  font-family: var(--fonts0);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  font-family: var(--fonts0);
+  color: var(--green2);
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+label {
+  font-family: var(--fonts0);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.darkTheme {
+  background: var(--black0);
+  color: var(--white0);
+}
+
+.lightTheme {
+  background: var(--white0);
+  color: var(--black0);
+}
+
+input,
+select {
+  border: 1px solid var(--black2);
+  height: 48px;
+  padding: 2px 12px 0px;
+  font-family: var(--fonts0);
+  letter-spacing: 0px;
+  color: var(--black0);
+  font-size: 1.8rem;
+  font-weight: 400;
+  width: 100%;
+}
+
+input:active,
+select:active,
+textarea:active {
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"]:active {
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid var(--black2);
+  height: 120px;
+  padding: 12px 12px 0px;
+  font-family: var(--fonts0);
+  letter-spacing: 0px;
+  color: var(--black0);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.8rem;
+  color: var(--black2);
+  letter-spacing: 0px;
+  font-family: var(--fonts0);
+  font-weight: 400;
+}
+
+select {
+  width: 100%;
+  padding-right: 48px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.selectBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.selectBox .downArrow {
+  max-width: 24px;
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+}
+
+.labelAndInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.labelAndInput label {
+  margin-bottom: 8px;
+}
+
+.inputGrid {
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  grid-gap: 24px;
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+}
+
+.checkboxBox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.checkboxBox label {
+  user-select: none;
+  position: relative;
+  top: 2px;
+  left: 12px;
+}
+
+input,
+textarea,
+select {
+  /* max-width: 800px; */
+}
+
+@media screen and (max-width: 500px) {
+  .inputGrid {
+    flex-wrap: wrap;
+  }
+
+  .labelAndInput + .spacer24 {
+    display: none;
+  }
+
+  .spacer24.lilKeeper {
+    display: inline-flex !important;
+  }
+}
+
+.sectionContainer {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.innerSectionContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button.primary {
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  letter-spacing: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  border: 1px solid var(--black3);
+  background: var(--black0);
+  color: var(--white0);
+  border: none;
+  height: 56px;
+}
+
+button {
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  letter-spacing: 0px;
+  font-size: 1.8rem;
+  background: var(--white2);
+  color: var(--black1);
+  border: none;
+  height: 56px;
+  padding: 8px 16px;
+  font-family: var(--fonts0);
+}
